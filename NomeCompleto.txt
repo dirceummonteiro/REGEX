@@ -1,0 +1,15 @@
+NOME COMPLETO
+
+REGEX(
+	{!ScreenNomeCompleto},
+	"(([a-zA-Zçãõáéí]){1,}(\\s){1,}([a-zA-Zçãõáéí]){1,}){1,}"
+)
+&&
+LEN({!ScreenNomeCompleto}) <= 100
+&&
+LEN({!ScreenNomeCompleto}) >= 2
+&&
+REGEX (
+	{!NomeCompleto},
+	"^[a-zA-ZçÇáéíóÁÉÍÓÀÌÒÈÃÕàèìòùúãõ\\s]+$"
+)
